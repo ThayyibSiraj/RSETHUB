@@ -1,0 +1,26 @@
+<!-- create_event.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Event</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Create New Event</h1>
+    <form method="POST" action="{{ url_for('create_event') }}">
+        <label for="title">Event Title:</label>
+        <input type="text" id="title" name="title" required><br>
+
+        <label for="date">Event Date:</label>
+        <input type="date" id="date" name="date" required><br>
+
+        <label for="description">Event Description:</label>
+        <textarea id="description" name="description"></textarea><br>
+
+        <button type="submit">Create Event</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to Events</a>
+</body>
+</html>

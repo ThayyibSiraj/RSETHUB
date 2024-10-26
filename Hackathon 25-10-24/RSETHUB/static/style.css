@@ -1,0 +1,129 @@
+body {
+    position: relative; /* For positioning child elements */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    margin: 0;
+    padding: 20px;
+    background-color: white; /* Fallback color */
+    overflow: hidden; /* Prevent overflow */
+}
+
+/* Background Image */
+body::before {
+    content: ""; /* Required for pseudo-element */
+    background-image: url("{{ url_for('static', filename='RSET.jpg') }}"); /* Path to your background image */
+    background-size: cover; /* Cover the entire body */
+    background-position: center; /* Center the image */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    opacity: 0.9; /* Set opacity */
+    z-index: -1; /* Behind other content */
+}
+
+/* Centered Logo Styles */
+.center-logo {
+    display: block; /* Ensure it's treated as a block element */
+    margin: 0 auto; /* Center horizontally */
+    width: 150px; /* Set a fixed width for the logo */
+    height: auto; /* Maintain aspect ratio */
+    position: relative; /* Position it relative */
+    top: 50%; /* Center vertically */
+    transform: translateY(0%); /* Adjust to center the logo vertically */
+    opacity: 0.8; /* Set transparency */
+    z-index: 1; /* Bring logo above background content */
+}
+
+/* Headings */
+h1 {
+    color: #2b6cb0; /* Main color for headings */
+    font-size: 2.5em; /* Larger heading */
+    text-align: center; /* Center align the heading */
+    margin-top: 20px; /* Space above the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    border-bottom: 2px solid #2b6cb0; /* Underline effect */
+    padding-bottom: 10px; /* Space below the border */
+}
+
+/* Event List */
+ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+}
+
+/* List Items */
+li {
+    background-color: #fff; /* White background for items */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside list items */
+    margin: 10px 0; /* Space between items */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s; /* Smooth scale effect on hover */
+}
+
+li:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #2b6cb0; /* Link color */
+    font-weight: bold; /* Make links bold */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Button Styles */
+button {
+    background-color: #2b6cb0; /* Button background color */
+    color: white; /* Text color for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners for buttons */
+    padding: 10px 20px; /* Padding for buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 1em; /* Button text size */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #1d4e8a; /* Darker blue on hover */
+}
+
+/* Form Styles */
+form {
+    background-color: #fff; /* White background for forms */
+    padding: 20px; /* Padding for forms */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space below the form */
+}
+
+label {
+    font-weight: bold; /* Bold labels */
+    margin-top: 10px; /* Space above labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding for inputs */
+    margin: 5px 0 15px; /* Space around inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: #2b6cb0; /* Border color on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(43, 108, 176, 0.5); /* Shadow on focus */
+}
